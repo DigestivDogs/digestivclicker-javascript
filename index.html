@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   </head>
   <body>
-  	<h1>A Bakery...</h1>
+  	<h1 id="bakeryname"></h1>
   	<hr/>
 		<span onclick="digestiveClick(1)"><img src="digestive.png" width="300" height="200"></span>
 		
@@ -18,5 +18,20 @@
 		<button class="w3-btn w3-round-large w3-grey w3-border w3-border-black" onclick="buyCursor()">Buy a Cursor <img src="cursor.png" width="25" height="25"></button>
 		
 		<script type="text/javascript" src="main.js"></script>
+	  	<script type="text/javascript">
+			window.onload = function() {
+				var person = prompt("What is your username going to be? If you don't input one, we will choose a random one for you", "");
+				if (person == "") {
+					var things = ['Rick Astley', 'Bananaphone', 'Jeff', 'John Cena'];
+					var thing = things[Math.floor(Math.random()*things.length)];
+					alert("The computer chose: " + thing + "'s Bakery!");
+					document.getElementById("bakeryname").innerHTML = thing + "'s Bakery!";
+				}
+				if (person != null) {
+					alert("Hello " + person + " welcome to your Bakery!");
+					document.getElementById("bakeryname").innerHTML = person + "'s Bakery!";
+				}
+			}
+	  </script>
 	</body>
 </html>
