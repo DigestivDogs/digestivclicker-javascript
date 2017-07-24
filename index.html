@@ -25,7 +25,8 @@
 					var things = ['Rick Astley', 'Bananaphone', 'Jeff', 'John Cena'];
 					var thing = things[Math.floor(Math.random()*things.length)];
 					alert("The computer chose: " + thing + "'s Bakery!");
-					document.getElementById("bakeryname").innerHTML = thing + "'s Bakery!";
+					person = thing;
+					document.getElementById("bakeryname").innerHTML = person + "'s Bakery!";
 				}
 				if (person != null) {
 					alert("Hello " + person + " welcome to your Bakery!");
